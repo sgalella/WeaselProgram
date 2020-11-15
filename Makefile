@@ -6,9 +6,9 @@ CFLAGS = -g -Wall
 
 all: main
 
-main: bin/cumulative_selection
+main: bin/weasel_program
 
-bin/cumulative_selection: src/cumulative_selection.c
+bin/weasel_program: src/weasel_program.c
 	@mkdir -p bin/
 	$(CC) $(CFLAGS) $< -o $@
 

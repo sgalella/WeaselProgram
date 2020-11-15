@@ -119,7 +119,6 @@ void mutation(int *best_indices, const Population *population, const Sequence *s
 }
 
 void print_best_solution(int iteration, const Population *population, const Sequence *sequence, int *best_indices){
-
     for (int i=0; i < sequence->length; i++){
         printf("%c", population->individuals[best_indices[0] * sequence->length + i]);
     }
@@ -128,7 +127,6 @@ void print_best_solution(int iteration, const Population *population, const Sequ
 }
 
 int main(int argc, char **argv){
-
     // Initialize random seed
     srand(time(0));
 
