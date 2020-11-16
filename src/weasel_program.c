@@ -128,14 +128,14 @@ void print_best_solution(int iteration, const Population *population, const Sequ
 
 int main(int argc, char **argv){
     // Initialize random seed
-    srand(time(0));
+    srand(1234);
 
     // Generate target sequence
-    char *sentence = "Hello there! This is a cumulative selection example.";
+    char *sentence = "This is the weasel program.";
     Sequence *sequence = create_sequence(sentence);
     print_sequence(sequence);
 
-    // Cumulative Selection Algorithm
+    // The Weasel Program
     int num_selected = 5;
     int num_individuals = 100;
     int num_iterations = 500;
@@ -153,6 +153,7 @@ int main(int argc, char **argv){
         if (best_fitness == 1){
             printf("\nGoal achieved at iteration %d!\n", iteration);
             print_best_solution(iteration, population, sequence, best_indices);
+            printf("\n");
             break;
         } else if (iteration % 10 == 0){
             printf("[Iteration: %3d]  ", iteration);
