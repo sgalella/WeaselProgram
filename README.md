@@ -20,5 +20,8 @@ make
 Run the weasel program as:
 
 ```bash
-./bin/weasel_program
+./bin/weasel_program "sentence"
 ```
+
+Where `sentence` is the desired target for the algorithm. It has to be delimited by `"`. 
+
