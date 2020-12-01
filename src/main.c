@@ -7,7 +7,12 @@ int main(int argc, char **argv){
     srand(1234);
 
     // Generate target sequence
-    char *sentence = "This is the weasel program.";
+    char *sentence = NULL;
+    if (argc == 1){
+        sentence = "This is the weasel program.";
+    } else {
+        sentence = argv[1];
+    }
     Sequence *sequence = create_sequence(sentence);
     print_sequence(sequence);
 
