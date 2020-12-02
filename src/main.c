@@ -6,6 +6,9 @@ int main(int argc, char **argv){
     // Initialize random seed
     srand(1234);
 
+    // Initialize file with fitness over iterations
+    FILE *fp = fopen("results/fitness.txt", "w");
+
     // Generate target sequence
     char *sentence = NULL;
     if (argc == 1){
@@ -40,7 +43,7 @@ int main(int argc, char **argv){
             printf("[Iteration: %3d]  ", iteration);
             print_best_solution(iteration, population, sequence, best_indices);
         }
-       
+       fprintf(fp, "%d %f\n", iteration, best_fitness);
        iteration += 1;
     }
     return 0;
