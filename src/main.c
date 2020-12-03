@@ -47,5 +47,6 @@ int main(int argc, char **argv){
        fprintf(fp, "%d %f %f\n", iteration, best_fitness, mean_fitness);
        iteration += 1;
     }
+    fprintf(fp, "%d %f %f\n", iteration, best_fitness, mean_fitness);
     return 0;
 }
