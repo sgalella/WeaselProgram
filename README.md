@@ -26,13 +26,7 @@ Run the weasel program as:
 
 Where `sentence` is the desired target for the algorithm. It has to be delimited by `"`. 
 
-Results will be saved by default in `results/fitness.txt`. To generate a plot run:
-
-```bash
-gnuplot src/plot.p
-```
-
-Plot will be saved in `results`.
+After running the code, a plot of the fitness over iterations will be saved by default in `results/`. 
 
 
 

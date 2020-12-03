@@ -48,5 +48,7 @@ int main(int argc, char **argv){
        iteration += 1;
     }
     fprintf(fp, "%d %f %f\n", iteration, best_fitness, mean_fitness);
+    fclose(fp);
+    system("gnuplot src/plot.p");
     return 0;
 }
