@@ -6,4 +6,6 @@ set ylabel "Fitness" font ",15"
 set yrange [0:1.1]
 set grid
 set datafile separator whitespace
-plot "results/fitness.txt" linecolor "blue"
+set key inside bottom right
+plot "results/fitness.txt" using 1:2 with lines linecolor "blue" title "Best fitness", \
+     "" using 1:3 with lines linecolor "orange" title "Mean fitness"

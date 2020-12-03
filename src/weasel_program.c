@@ -55,6 +55,14 @@ float calculate_fitness(const Population *population, const Sequence *sequence){
     return best_fitness;
 }
 
+float calculate_mean_fitness(const Population *population){
+    float mean_fitness = 0.0;
+    for (int i=0; i < population->num_individuals; i++){
+        mean_fitness += population->fitness[i];
+    }
+    return mean_fitness / population->num_individuals;
+}
+
 int cmp(const void *a, const void *b){
     return (*(int *)b - *(int *)a);
 }

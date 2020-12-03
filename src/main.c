@@ -27,10 +27,11 @@ int main(int argc, char **argv){
 
     int iteration = 0;
     int *best_indices;
-    float best_fitness;
+    float best_fitness, mean_fitness;
 
     while (iteration < num_iterations){
         best_fitness = calculate_fitness(population, sequence);
+        mean_fitness = calculate_mean_fitness(population);
         best_indices = argsort(population);
         mutation(best_indices, population, sequence);
 
@@ -43,7 +44,7 @@ int main(int argc, char **argv){
             printf("[Iteration: %3d]  ", iteration);
             print_best_solution(iteration, population, sequence, best_indices);
         }
-       fprintf(fp, "%d %f\n", iteration, best_fitness);
+       fprintf(fp, "%d %f %f\n", iteration, best_fitness, mean_fitness);
        iteration += 1;
     }
     return 0;
